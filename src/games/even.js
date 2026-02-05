@@ -1,4 +1,5 @@
 const isEven = (num) => num % 2 === 0;
+
 const getRandomNumber = () => Math.floor(Math.random() * 100) + 1;
 
 const runEvenGame = () => {
