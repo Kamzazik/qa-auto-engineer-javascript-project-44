@@ -23,16 +23,3 @@ const runGcdGame = () => {
 };
 
 export default runGcdGame;
-
-// Основная логика игры
-const runGcdGame = () => {
-  const num1 = getRandomNumber(1, 100);
-  const num2 = getRandomNumber(1, 100);
-  
-  const question = `${num1} ${num2}`;
-  const correctAnswer = String(findGcd(num1, num2));
-  
-  return { question, correctAnswer };
-};
-
-export default runGcdGame;
