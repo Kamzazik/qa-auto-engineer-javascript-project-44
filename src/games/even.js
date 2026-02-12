@@ -1,5 +1,5 @@
 // Функция проверки на чётность
-const isEven = (num) => num % 2 === 0
+const isEven = num => num % 2 === 0
 
 // Генерация случайного числа
 const getRandomNumber = () => Math.floor(Math.random() * 100) + 1
