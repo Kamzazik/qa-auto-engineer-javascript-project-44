@@ -6,7 +6,7 @@ export default [
   js.configs.recommended,
   {
     plugins: {
-      '@stylistic': stylistic
+      '@stylistic': stylistic,
     },
     rules: {
       '@stylistic/semi': ['error', 'never'],
@@ -14,14 +14,14 @@ export default [
       '@stylistic/linebreak-style': 'off',
       '@stylistic/quotes': ['error', 'single'],
       '@stylistic/no-trailing-spaces': 'error',
-      '@stylistic/eol-last': ['error', 'always']
+      '@stylistic/eol-last': ['error', 'always'],
     },
     languageOptions: {
       globals: {
-        ...globals.node
+        ...globals.node,
       },
       ecmaVersion: 'latest',
-      sourceType: 'module'
-    }
-  }
+      sourceType: 'module',
+    },
+  },
 ]
