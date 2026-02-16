@@ -12,7 +12,7 @@ const generateProgression = (start, step, length) => {
 
 // Основная логика игры
 const runProgressionGame = () => {
-  const progressionLength = getRandomNumber(5, 10); // длина от 5 до 10
+  const progressionLength = getRandomNumber(5, 10) // длина от 5 до 10
   const start = getRandomNumber(1, 50)
   const step = getRandomNumber(2, 10)
   const hiddenIndex = getRandomNumber(0, progressionLength - 1)
