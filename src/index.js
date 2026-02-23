@@ -1,10 +1,9 @@
 import readlineSync from 'readline-sync'
+import greetUser from './cli.js'
 
 // Общая функция для запуска любой игры
 const runGame = (gameDescription, getGameData) => {
-  console.log('Welcome to the Brain Games!')
-  const userName = readlineSync.question('May I have your name? ')
-  console.log(`Hello, ${userName}!`)
+  const userName = greetUser()
   console.log(gameDescription)
 
   const roundsCount = 3
