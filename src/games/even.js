@@ -1,12 +1,11 @@
+import getRandomNumber from '../utils.js'
+
 // Функция проверки на чётность
 const isEven = num => num % 2 === 0
 
-// Генерация случайного числа
-const getRandomNumber = () => Math.floor(Math.random() * 100) + 1
-
 // Основная функция игры чётность
 const runEvenGame = () => {
-  const number = getRandomNumber()
+  const number = getRandomNumber(1, 100)  // <-- добавил аргументы
   const question = String(number)
   const correctAnswer = isEven(number) ? 'yes' : 'no'
 

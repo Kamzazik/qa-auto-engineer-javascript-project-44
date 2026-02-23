@@ -1,7 +1,6 @@
-// Генерация случайного числа
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
+import getRandomNumber from '../utils.js'
 
-// Проверка на простое число
+// Функция проверки на простоту
 const isPrime = (num) => {
   if (num < 2) return false
   for (let i = 2; i <= Math.sqrt(num); i += 1) {
@@ -10,9 +9,9 @@ const isPrime = (num) => {
   return true
 }
 
-// Основная логика игры
+// Основная функция игры простое число
 const runPrimeGame = () => {
-  const number = getRandomNumber(1, 100)
+  const number = getRandomNumber(1, 50)
   const question = String(number)
   const correctAnswer = isPrime(number) ? 'yes' : 'no'
 

@@ -1,35 +1,24 @@
-// Генерация случайного числа
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
+import getRandomNumber from '../utils.js'
 
-// Генерация случайного оператора (+, -, *)
-const getRandomOperator = () => {
-  const operators = ['+', '-', '*']
-  const randomIndex = Math.floor(Math.random() * operators.length)
-  return operators[randomIndex]
-}
-
-// Вычисление результата
-const calculate = (num1, operator, num2) => {
+// Функция для вычисления результата
+const calculate = (num1, num2, operator) => {
   switch (operator) {
-    case '+':
-      return num1 + num2
-    case '-':
-      return num1 - num2
-    case '*':
-      return num1 * num2
-    default:
-      return null
+    case '+': return num1 + num2
+    case '-': return num1 - num2
+    case '*': return num1 * num2
+    default: return null
   }
 }
 
 // Основная функция игры калькулятор
 const runCalcGame = () => {
-  const num1 = getRandomNumber(1, 50)
-  const num2 = getRandomNumber(1, 50)
-  const operator = getRandomOperator()
+  const num1 = getRandomNumber(1, 20)
+  const num2 = getRandomNumber(1, 20)
+  const operators = ['+', '-', '*']
+  const operator = operators[getRandomNumber(0, operators.length - 1)]
 
   const question = `${num1} ${operator} ${num2}`
-  const correctAnswer = String(calculate(num1, operator, num2))
+  const correctAnswer = String(calculate(num1, num2, operator))
 
   return { question, correctAnswer }
 }

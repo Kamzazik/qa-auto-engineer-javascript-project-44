@@ -1,5 +1,7 @@
-// Функция для нахождения НОД (алгоритм Евклида)
-const findGcd = (a, b) => {
+import getRandomNumber from '../utils.js'
+
+// Функция для нахождения НОД
+const gcd = (a, b) => {
   while (b !== 0) {
     const temp = b
     b = a % b
@@ -8,16 +10,13 @@ const findGcd = (a, b) => {
   return a
 }
 
-// Генерация случайного числа
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
-
-// Основная логика игры
+// Основная функция игры НОД
 const runGcdGame = () => {
-  const num1 = getRandomNumber(1, 100)
-  const num2 = getRandomNumber(1, 100)
+  const num1 = getRandomNumber(1, 50)
+  const num2 = getRandomNumber(1, 50)
 
   const question = `${num1} ${num2}`
-  const correctAnswer = String(findGcd(num1, num2))
+  const correctAnswer = String(gcd(num1, num2))
 
   return { question, correctAnswer }
 }

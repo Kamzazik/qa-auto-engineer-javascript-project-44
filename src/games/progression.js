@@ -1,5 +1,4 @@
-// Генерация случайного числа в диапазоне
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
+import getRandomNumber from '../utils.js'
 
 // Создание арифметической прогрессии
 const generateProgression = (start, step, length) => {
@@ -10,9 +9,9 @@ const generateProgression = (start, step, length) => {
   return progression
 }
 
-// Основная логика игры
+// Основная функция игры прогрессия
 const runProgressionGame = () => {
-  const progressionLength = getRandomNumber(5, 10) // длина от 5 до 10
+  const progressionLength = getRandomNumber(5, 10)
   const start = getRandomNumber(1, 50)
   const step = getRandomNumber(2, 10)
   const hiddenIndex = getRandomNumber(0, progressionLength - 1)
